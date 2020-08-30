@@ -6,3 +6,5 @@ The application uses **.NET Core 3.1.** framework <br>
 Prefered environment for development - **Microsoft Visual Studio**.
 
 The installer file is created using **Inno Setup**.
+
+<img src="https://raw.githubusercontent.com/Quickz/swf-game-file-extractor/master/.github/thumbnail.png">
