@@ -6,6 +6,7 @@
     <UseWPF>true</UseWPF>
     <ApplicationIcon>icon.ico</ApplicationIcon>
     <NoWin32Manifest>true</NoWin32Manifest>
+    <AssemblyName>SWF Game File Extractor</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
