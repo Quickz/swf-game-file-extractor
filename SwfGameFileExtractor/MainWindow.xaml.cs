@@ -17,7 +17,7 @@ using Ookii.Dialogs.Wpf;
 using System.Windows.Forms;
 using MessageBox = System.Windows.MessageBox;
 
-namespace InboxSwfGameFileExtractor
+namespace SwfGameFileExtractor
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -79,7 +79,7 @@ namespace InboxSwfGameFileExtractor
                     throw new Exception("Invalid directory!");
 
                 TextBlockProgressLabel.Text = "Searching for the game file";
-                InboxGame game = await InboxGame.CreateInstanceFrom(TextBoxUrl.Text);
+                SwfGame game = await SwfGame.CreateInstanceFrom(TextBoxUrl.Text);
                 Download(game.SwfFileUrl, @$"{TextBoxPath.Text}\{game.Title}.swf");
             }
             catch (Exception e)

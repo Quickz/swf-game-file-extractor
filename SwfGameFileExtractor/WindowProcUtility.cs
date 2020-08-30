@@ -5,7 +5,7 @@ using System.Text;
 using System.Windows;
 using System.Windows.Interop;
 
-namespace InboxSwfGameFileExtractor
+namespace SwfGameFileExtractor
 {
     // References:
     // https://stackoverflow.com/a/42806834/5946094

@@ -1,13 +1,13 @@
-﻿<Window x:Class="InboxSwfGameFileExtractor.MainWindow"
+﻿<Window x:Class="SwfGameFileExtractor.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:InboxSwfGameFileExtractor"
+        xmlns:local="clr-namespace:SwfGameFileExtractor"
         xmlns:adorners="http://gu.se/Adorners"
         mc:Ignorable="d"
         Background="#23272a"
-        Title="Inbox Game Extractor" Height="400" Width="700"
+        Title="SWF Game Extractor" Height="400" Width="700"
         WindowStyle="None"
         AllowsTransparency="True">
 
@@ -34,7 +34,7 @@
                     Source="/icon.ico" />
 
                 <Label
-                    Content="Inbox Game Extractor"
+                    Content="SWF Game Extractor"
                     FontWeight="Bold"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Left"

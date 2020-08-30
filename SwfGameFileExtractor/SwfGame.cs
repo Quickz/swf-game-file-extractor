@@ -1,29 +1,23 @@
 ﻿using HtmlAgilityPack;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Net;
 using System.Net.Http;
-using System.Reflection;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace InboxSwfGameFileExtractor
+namespace SwfGameFileExtractor
 {
-    class InboxGame
+    class SwfGame
     {
         public string Title { get; private set; }
         public string SwfFileUrl { get; private set; }
 
-        public InboxGame(string title, string swfFileUrl)
+        public SwfGame(string title, string swfFileUrl)
         {
             Title = title;
             SwfFileUrl = swfFileUrl;
         }
 
-        // Expected input: http://games.inbox.lv/mini/game/[THE GAME YOU WANT]/
-        // Remove the []
-        public static async Task<InboxGame> CreateInstanceFrom(string gameUrl)
+        public static async Task<SwfGame> CreateInstanceFrom(string gameUrl)
         {
             HtmlDocument html = await GetHtmlFrom(gameUrl);
             string id = GetSwfFileIdFrom(html);
@@ -41,7 +35,7 @@ namespace InboxSwfGameFileExtractor
 
             string swfFileUrl = $"http://games.inbox.lv/uploads/games/{ id }.swf";
 
-            return new InboxGame(title, swfFileUrl);
+            return new SwfGame(title, swfFileUrl);
         }
 
         private static string GetSwfFileTitleFrom(HtmlDocument document)
