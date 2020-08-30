@@ -109,7 +109,7 @@
                     FontSize="20"
                     VerticalContentAlignment="Center"
                     Padding="5 0"
-                    Text="..."
+                    Text="Directory Path"
                     IsReadOnly="True"/>
 
                 <Button
