@@ -24,12 +24,22 @@
             VerticalAlignment="Top"
             Background="#202225">
 
-            <Label
-                Content="Inbox Game Extractor"
-                FontWeight="Bold"
-                VerticalAlignment="Center"
-                HorizontalAlignment="Left"
-                Foreground="#CACACC"/>
+            <StackPanel
+                Height="25"
+                Orientation="Horizontal">
+                
+                <Image
+                    Width="20"
+                    Height="20"
+                    Source="/icon.ico" />
+
+                <Label
+                    Content="Inbox Game Extractor"
+                    FontWeight="Bold"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Left"
+                    Foreground="#CACACC"/>
+            </StackPanel>
 
             <StackPanel
                 Name="WindowControls"
