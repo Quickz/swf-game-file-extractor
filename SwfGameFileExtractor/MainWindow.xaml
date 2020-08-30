@@ -31,7 +31,7 @@
                 <Image
                     Width="20"
                     Height="20"
-                    Source="/icon.ico" />
+                    Source="/app-icon.ico" />
 
                 <Label
                     Content="SWF Game Extractor"

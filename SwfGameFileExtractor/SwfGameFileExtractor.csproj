@@ -4,17 +4,17 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
-    <ApplicationIcon>icon.ico</ApplicationIcon>
+    <ApplicationIcon>app-icon.ico</ApplicationIcon>
     <NoWin32Manifest>true</NoWin32Manifest>
     <AssemblyName>SWF Game File Extractor</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="icon.ico" />
+    <None Remove="app-icon.ico" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="icon.ico" />
+    <Resource Include="app-icon.ico" />
   </ItemGroup>
 
   <ItemGroup>
