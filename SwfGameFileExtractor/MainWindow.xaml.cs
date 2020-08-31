@@ -68,18 +68,30 @@ namespace SwfGameFileExtractor
 
         // URL examples:
         // https://games.inbox.lv/mini/game/gold-strike/
-        // https://games.inbox.lv/mini/game/Bloody-Night/
         private async void TryDownloadAsync()
         {
             try
             {
-                if (!TextBoxUrl.Text.Contains("games.inbox.lv/mini/game/"))
-                    throw new Exception("Invalid input!");
                 if (TextBoxPath.Text == DefaultPath)
+                {
                     throw new Exception("Invalid directory!");
+                }
 
                 TextBlockProgressLabel.Text = "Searching for the game file";
-                SwfGame game = await SwfGame.CreateInstanceFrom(TextBoxUrl.Text);
+
+                SwfGame game = null;
+
+                // Stuff needed for the download
+                if (TextBoxUrl.Text.Contains("games.inbox.lv/mini/game/"))
+                    game = await InboxSwfFactory.CreateInstanceFrom(TextBoxUrl.Text);
+                else
+                    throw new Exception("Invalid input!");
+
+                if (game == null)
+                {
+                    throw new Exception("Game unavailable!");
+                }
+
                 Download(game.SwfFileUrl, @$"{TextBoxPath.Text}\{game.Title}.swf");
             }
             catch (Exception e)
