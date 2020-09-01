@@ -84,6 +84,8 @@ namespace SwfGameFileExtractor
                 // Stuff needed for the download
                 if (TextBoxUrl.Text.Contains("games.inbox.lv/mini/game/"))
                     game = await InboxSwfFactory.CreateInstanceFrom(TextBoxUrl.Text);
+                else if (TextBoxUrl.Text.Contains("y8.com/games/"))
+                    game = await Y8SwfFactory.CreateInstanceFrom(TextBoxUrl.Text);
                 else
                     throw new Exception("Invalid input!");
 
